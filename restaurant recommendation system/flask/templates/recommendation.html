@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Recommendations</title>
+</head>
+<body>
+    <h1>Restaurant Recommendations for {{ user_preference }}</h1>
+    <ul>
+        {% for index, restaurant in recommendations.iterrows() %}
+            <li>{{ restaurant['name'] }} - Cuisine: {{ restaurant['cuisine'] }} | Rating: {{ restaurant['rating'] }} | Cost: {{ restaurant['cost'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
